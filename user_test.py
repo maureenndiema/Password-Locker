@@ -42,7 +42,19 @@ def test_save_user(self):
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
 
-        
+   
+def test_save_multiple_user(self):
+            '''
+            test_save_multiple_user to check if we can save multiple user
+            objects to our user_list
+            '''
+            self.new_contact.save_user()
+            test_contact = User("Test","user","0710909747","test@user.com") # new contact
+            test_contact.save_user()
+            self.assertEqual(len(User.user_list),2)
+
+
+
    
 
 

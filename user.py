@@ -1,7 +1,7 @@
-class User:
-    '''
+class user:
+    """
     class that generates new instance of user
-    '''
+    """
 
     user_list = []
 
@@ -11,11 +11,13 @@ class User:
 
     def save_user(self):
 
-        '''
+        """
         save_user method saves a new user objects to the user_list
-        '''
+        """
 
-        User.save_user.append(self)
+        user.save_user.append(self)
+
+    
 
         
 
