@@ -1,4 +1,4 @@
-class user:
+class User:
     """
     class that generates new instance of user
     """
@@ -15,7 +15,7 @@ class user:
         save_user method saves a new user objects to the user_list
         """
 
-        user.save_user.append(self)
+        User.save_user.append(self)
 
     
 
