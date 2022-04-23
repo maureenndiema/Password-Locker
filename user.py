@@ -17,11 +17,22 @@ class User:
 
         User.save_user.append(self)
 
+   
     def delete_user(self):
         '''
         delete a user account
         '''
         User.user_list.remove(self)
+
+    
+    @classmethod
+    def find_user(cls, username):
+        '''
+        find username using search terms
+        '''
+        for user in cls.user_list:
+            if user.username == username:
+                return  user
 
     
 
