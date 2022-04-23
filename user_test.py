@@ -48,12 +48,23 @@ def test_save_multiple_user(self):
     test_save_multiple_user to check if we can save multiple user
     objects to our user_list
     '''
-    self.new_contact.save_user()
-    test_contact = User("Test","user","0710909747","test@user.com") # new contact
+    self.new_user.save_user()
+    test_contact = User("Test","user","password") # new contact
     test_contact.save_user()
     self.assertEqual(len(User.user_list),2)
 
-    
+def test_delete_user(self):
+    '''
+    test_delete_user to test if we can remove a user from our user list
+    '''
+    self.new_user.save_user()
+    test_user = User("Test","user","password") # new user
+    test_user.save_user()
+
+    self.new_user.delete_user()# Deleting a user object
+    self.assertEqual(len(User.user_list),1)
+
+
 
 
 
