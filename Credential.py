@@ -1,3 +1,4 @@
+import pyperclip
 import Credential
 class Credential:
 
@@ -57,6 +58,12 @@ class Credential:
         method that returns all credential
         '''
         return cls.credential_list
+
+
+    @classmethod
+    def copy_passlock(cls, passlock):
+            find_account = Credential.find_account(passlock)
+            pyperclip.copy(find_account.passlock)    
              
    
   
