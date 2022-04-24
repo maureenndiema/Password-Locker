@@ -5,7 +5,7 @@ class User:
 
     user_list = []
 
-    def _init_(self, user_name,password):
+    def __init__(self, user_name, password):
         self.user_name = user_name
         self.password = password
 
@@ -15,7 +15,7 @@ class User:
         save_user method saves a new user objects to the user_list
         """
 
-        User.save_user.append(self)
+        User.user_list.append(self)
 
    
     def delete_user(self):
@@ -31,7 +31,7 @@ class User:
         find username using search terms
         '''
         for user in cls.user_list:
-            if user.username == username:
+            if user.user_name == username:
                 return  user
 
     
