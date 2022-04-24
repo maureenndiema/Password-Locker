@@ -32,6 +32,18 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(len(Credential.credential_list),1)
 
 
+    def test_saving_multiple_credential(self):
+        '''
+        check if user can store multiple credential
+        '''
+        self.new_credential.save_credential()
+        test_cred = Credential("Instagram", "testuser","passlock")
+        test_cred.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
+
+
+
+
     
 
 
