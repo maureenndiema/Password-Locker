@@ -61,8 +61,8 @@ class Credential:
 
 
     @classmethod
-    def copy_passlock(cls, passlock):
-            find_account = Credential.find_account(passlock)
+    def passlock(cls, account):
+            find_account = Credential.find_account(account)
             pyperclip.copy(find_account.passlock)    
              
    
