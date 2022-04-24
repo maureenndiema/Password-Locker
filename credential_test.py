@@ -37,9 +37,21 @@ class TestCredential(unittest.TestCase):
         check if user can store multiple credential
         '''
         self.new_credential.save_credential()
-        test_cred = Credential("Instagram", "testuser","passlock")
-        test_cred.save_credential()
+        test_credential = Credential("Instagram", "testuser","passlock")
+        test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
+
+    def test_delete_credential(self):
+        '''
+        test if you can delete credential test
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Instagram", "testuser","passlock")
+        test_credential.save_credential()
+        self.new_credential.delete_credential()
+        self.assertEqual(len(Credential.credential_list), 1)
+
+
 
 
 
