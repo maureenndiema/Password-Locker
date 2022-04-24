@@ -51,6 +51,18 @@ class TestCredential(unittest.TestCase):
         self.new_credential.delete_credential()
         self.assertEqual(len(Credential.credential_list), 1)
 
+    def test_search_for_credential(self):
+        '''
+        test if credential can be searched for
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Instagram", "testuser","passlock")
+        test_credential.save_credential()
+        find_credential= Credential.find_account("Instagram")
+        self.assertEqual(find_credential.account, test_credential.account)
+
+        
+
 
 
 
