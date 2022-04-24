@@ -1,10 +1,10 @@
-from click import password_option
 from Credential import Credential
 from user import User
 import random
 
 
-def create_useraccount(username, password):
+
+def create_user_account(username, password):
     '''
     method creates a user account
     '''
@@ -84,7 +84,7 @@ def main():
             print("Password: ")
             password = input()
 
-            save_user(create_useraccount(username, password))
+            save_user(create_user_account(username, password))
             print('\n')
             print(f"{name}'s Account information: ")
             print(f"Username: {username} , Password:{password}")
@@ -162,6 +162,22 @@ def main():
                 password = "".join(random.sample(letters, lent))
                 print(f"Your password has {lent} characters ")
                 print(password)
+
+        elif short_code == "de":
+            print("Enter the account name of the Credential you want to delete")
+            search_name = input().lower()
+            if delete_credential(search_name):
+                search_credential = delete_credential(search_name)
+                print("_"*50)
+                search_credential.delete_credential()
+                print('\n')
+                print(f"Your stored credential for : {search_credential.account} successfully deleted!!!")
+                print('\n')
+            else:
+                print("That Credential you want to delete does not exist in your store yet")
+
+
+
 
         elif short_code == 'ex':
             print("*"*30)

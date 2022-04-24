@@ -18,7 +18,7 @@ A simple application that helps us manage our passwords and even generate new se
 ## Technologies Used
 
 1. python3.8
-2. Flask
+
 
 ## Behavior Driven Development
 
