@@ -16,3 +16,11 @@ def save_user(user):
     '''
     user.save_user()
 
+def save_credential(credential):
+
+    '''
+    method save credential  account
+    '''
+
+    credential.save_credential
+
