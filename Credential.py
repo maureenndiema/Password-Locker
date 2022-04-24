@@ -3,7 +3,7 @@ import Credential
 class Credential:
 
     '''
-    class that creates instaces of user accounts
+    class that creates instances of user accounts
     '''
    
     credential_list = []
