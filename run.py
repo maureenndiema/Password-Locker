@@ -24,3 +24,18 @@ def save_credential(credential):
 
     credential.save_credential
 
+def find_user(username):
+    '''
+    method for find user using username
+    '''
+    return User.find_user(username)
+
+def create_credential(account, email, passlock):
+    '''
+    method credential details
+    '''
+    new_credential = Credential(account, email, passlock)
+    return new_credential
+
+    
+
