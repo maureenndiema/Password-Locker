@@ -24,7 +24,23 @@ class Credential:
         '''
         Credential.credential_list.append(self)
 
-        
+    def delete_credential(self):
+        '''
+        delete credential 
+        '''
+        Credential.credential_list.remove(self) 
+
+
+    @classmethod
+    def find_account(cls, account):
+        '''
+        search for accounts
+        '''
+        for credential in cls.credential_list:
+            if credential.account == account:
+                return credential    
+   
+  
 
 
 
