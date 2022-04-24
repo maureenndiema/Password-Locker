@@ -71,6 +71,13 @@ class TestCredential(unittest.TestCase):
         credential_exists = Credential.credential_exists("Instagram")
         self.assertTrue(credential_exists)
 
+    def test_display_credential(self):
+        '''
+        test if all credential can be displayed
+        '''
+        self.assertEqual(Credential.display_credential(), Credential.credential_list)
+
+
 
 
 
