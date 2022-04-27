@@ -1,8 +1,7 @@
+#!/usr/bin/env python3.8
 from Credential import Credential
 from user import User
 import random
-
-
 
 def create_user_account(username, password):
     '''
@@ -166,7 +165,7 @@ def main():
         elif short_code == "de":
             print("Enter the account name of the Credential you want to delete")
             search_name = input().lower()
-            if delete_credential(search_name):
+            if delete_credential(account):
                 search_credential = delete_credential(search_name)
                 print("_"*50)
                 search_credential.delete_credential()
@@ -174,7 +173,7 @@ def main():
                 print(f"Your stored credential for : {search_credential.account} successfully deleted!!!")
                 print('\n')
             else:
-                print("That Credential you want to delete does not exist in your store yet")
+                print("The Credential you want to delete does not exist in your store yet")
 
 
 
